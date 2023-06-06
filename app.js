@@ -3,7 +3,7 @@ const path = require("path");
 const Subscriber = require("./src/models/subscribers");
 const app = express();
 
-// app.use(express.static("public"))
+app.use(express.static("public"))
 //routes
 
 //api to render html file. || GET
