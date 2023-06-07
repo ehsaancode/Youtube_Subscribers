@@ -7,7 +7,7 @@ const dotenv = require("dotenv")
 //configuring env
 dotenv.config();
 
-app.use(express.static("public"));
+
 
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json())
