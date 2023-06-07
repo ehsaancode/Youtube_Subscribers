@@ -1,64 +1,102 @@
-# Almabetter Capstone Project - Get Youtube Subscribers
+# Backend Capstone Project | Get-Youtube-Subscribers
 
-This project is a backend application that provides APIs for managing YouTube Subscibers.
 
-We have to create a backend api which will send the response in form of JSON, by using modular coding approach which contains having different files for the api connection, the database should be handled by another file.
+This is a Node, Express app to getting details of youtube subscribers.
 
-The APIs provided by this application include the following:
+##
 
-✅GET [http://localhost:3000/subscribers] - Response with an array of subscribers(an Object).
+## Deployed URL
 
-✅GET [http://localhost:3000/subscribers/names] - Response with an array of subscribers(an Object with only two fields name and subscribedChannel).
+https://yt.ehsaancode.vercel.app/
 
-✅GET [http://localhost:3000/subscribers/:id] - Response with a subscriber*(an object)* with given id & Response with status code 400 and Error message({message: error.message}) if id does not match.
+## There are four API endpoints in this app
 
-## Prerequisites
+1 - "/ "
 
-Before running this application, you must have the following softwares:
+2 - "/subscribers "
 
-Node.js https://nodejs.org/en
+3 - "/subscribers/names "
 
-MongoDB https://www.mongodb.com/try/download/shell
+4 - "/subscribers/:id "
 
-## **How To Run Locally**
-- To run this project locally, use the following command in your CLI:
+##
 
-1. Clone this repository:
+### 1 - "/ " default route.
 
-```bash
- git clone https://github.com/SakshamAgrawall/Get_Youtube_subscribers.git
-```
+when app start this default route will render index.html file.
 
-2. Install dependencies:
+e.g. ==> http://localhost:300/
 
-```bash
- npm i
-```
+### 2 - "/subscribers "  route.
 
-3. Create a .env file and add monogodb uri
+When user go to this route it will returns an array of object. It will response with an array of subscribers object.
 
-4. Create a database:
+e.g. ==>  http://localhost:300/subscribers
 
-```bash
-cd src
-node createDatabase.js
-```
+### 3 - "/subscribers/names " route
 
-5. Start the application:
+When user go to this route it will returns an array of object. It will response with an array of object with only Subscribers name and Subscribers Channel.
 
-```bash
- npm run start
-```
-- Go to any Browser and search localhost:3000
+e.g. ==> http://localhost:300/subscribers/names
 
-## Characteristics
+### 4 -"/subscribers/:id " route
 
-- User can get the all subscribers.
-- User can get the all subscriber with only name and subscribedchannel.
-- user can get the subscriber by id.
+When user go to this route it will returns an object of subscriber. It will response with a subscriber object with given id, ans also response with status code 400. If user enter wrong id or enter nothing it will give response with error messege.
 
-## 🛠 Skills
- MongoDB | Nodejs | express | Mongoose
- 
-## NOTE 
- This capstone project is associated with <a href="https://www.almabetter.com">Almabetter</a>
+e.g ==> http://subscribers/id
+
+if user enter wrong id, messege will be { messege : "Sorry....! You enter wrong ID, No such subscriber found in this ID."}
+
+##
+
+## libraries use in this app
+
+     cors
+    
+     dotenv
+     
+     express
+     
+     mochawesome
+     
+     mongoose
+     
+     nodemon
+     
+     supertest
+     
+     nodemon 
+##
+
+## Available Scripts
+
+### npm start
+
+It will start the server index.js file
+
+### npm run dev
+
+It will start developent server using nodemon.
+
+### npm run createDB
+
+It will create database using data.js file , This command works only if user have mongodb install in there local system.
+
+### npm test 
+
+It will run the subscribers.test.js file to test the all testcases.
+
+## 
+
+## Clone this app
+
+First we need to run "npm i" in terminal. 
+
+Then run command - npm run createDB  => to create database , This command works only if you have mongodb install in your local system.
+
+then run command - npm start to start the server.
+
+## Project Created by
+- (https://github.com/ehsaanCode)
+
+## Thank You
