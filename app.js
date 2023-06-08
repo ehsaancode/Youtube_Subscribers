@@ -8,13 +8,14 @@ app.use(express.static("public"))
 
 //routes
 
-//api to render html file. || GET
+//API to render html file. || GET Method
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public/index.html"));
 
 });
 
-//api to get all data || METHOD GET
+//API to get all data || GET Method
+//returns the subscribers details
 app.get("/subscribers", async (req, res) => {
   try {
     let subscribers = await Subscriber.find();
@@ -25,7 +26,8 @@ app.get("/subscribers", async (req, res) => {
 })
 
 
-//api to get all subscribers by name and subscribed channel || METHIOD GET
+//api to get all subscribers by name and subscribed channel || GET Method
+//returns the subscribers for the given names.
 app.get("/subscribers/names", async (req, res) => {
   try {
     let subscribers = await Subscriber.find({},
@@ -40,7 +42,8 @@ app.get("/subscribers/names", async (req, res) => {
 
 
 
-//api to get subscribers by id || METHOD GET
+//api to get subscribers by id || GET Method
+//returns the subscribers for the given id.
 app.get("/subscribers/:id", async (req, res) => {
   try {
     let subscribers = await Subscriber.findById(req.params.id);
