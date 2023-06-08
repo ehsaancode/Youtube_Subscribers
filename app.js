@@ -7,7 +7,6 @@ const app = express();
 app.use(express.static("public"))
 
 //routes
-
 //API to render html file. || GET Method
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public/index.html"));
@@ -25,7 +24,6 @@ app.get("/subscribers", async (req, res) => {
   }
 })
 
-
 //api to get all subscribers by name and subscribed channel || GET Method
 //returns the subscribers for the given names.
 app.get("/subscribers/names", async (req, res) => {
@@ -38,9 +36,6 @@ app.get("/subscribers/names", async (req, res) => {
     res.status(500);
   }
 })
-
-
-
 
 //api to get subscribers by id || GET Method
 //returns the subscribers for the given id.
