@@ -7,7 +7,7 @@ This is a Node, Express app to getting details of youtube subscribers.
 
 ## Deployed URL
 
-https://yt.ehsaancode.vercel.app/
+https://ytsub.ehsaancode.vercel.app/
 
 ## There are four API endpoints in this app
 
